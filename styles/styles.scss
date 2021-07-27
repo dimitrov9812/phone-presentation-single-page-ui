@@ -1,0 +1,290 @@
+@import './variables/defaults';
+@import './variables/themes';
+@import './mixins/mixins';
+// Breakpoints -> mobile -> tablet -> laptop -> desktop
+
+body {
+    // font: 62.5%/1.5  "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100vh;
+
+    @include flexColumn();
+
+    @include fontPrimary();
+
+
+    // Breakpoint test
+    // @include breakpoint(mobile) {
+    //     background-color: red;
+    // }
+
+    // @include breakpoint(tablet) {
+    //     background-color: yellow;
+    // }
+    
+    // @include breakpoint(laptop) {
+    //     background-color: blue;
+    // }
+
+
+    // @include breakpoint(desktop) {
+    //     background-color: black;
+    // }
+
+}
+
+* {
+    transition: all .15s ease;
+}
+
+// Language specific styles
+    //li:lang(en) { color: red }
+    // li:lang(fr) { color: blue }
+    // li:lang(de) { color: yellow }
+
+a {
+    text-decoration: none;
+    color: $font-color-primary-themed;
+}
+
+.not-localized {
+    display: none;
+}
+
+// Nav Bar styles
+.nav-wrap {
+    background-color: $bg-primary-themed-reversed;
+
+    .nav {
+        @include breakpoint(mobile) {
+            width: 100%;
+            @include flexColumn();
+        }
+
+        @include breakpoint(tablet) {
+            width: 95%;
+            margin: 0 auto;
+            @include flexRow();
+            justify-items: flex-start;
+            align-items: center;
+        }
+
+        &-logo {
+            @include flexRow;
+            justify-content: space-between;
+
+            img {
+                @include breakpoint(mobile) {
+                    height: 50px;
+                }
+
+                @include breakpoint(tablet) {
+                    height: 80px;
+                }
+            }
+
+            @include breakpoint(mobile) {
+                padding-left: $defaultSpacing-m;
+            }
+
+            @include breakpoint(tablet) {
+                padding: 0;
+            }
+        }
+
+        .ul-nav {
+            flex: 1;
+            @include flexRow();
+
+            @include breakpoint(mobile) {
+                justify-content: center;
+            }
+
+            @include breakpoint(tablet) {
+                justify-content: flex-end;
+                flex: 1;
+            }
+            
+            li {
+                padding: $defaultSpacing-m;
+
+                @include breakpoint(mobile) {
+                    font-size: $font-s * 1.1;
+                }
+
+                @include breakpoint(laptop) {
+                    font-size: $font-xl;
+                }
+            }
+        }
+
+        @include breakpoint(mobile) {
+            .buttons-wrap {
+                display: none;
+            }
+
+            .buttons-wrap-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .toggle-theme-button {
+                div {
+                    height: 30px;
+                    width: 30px;
+                    background-color: transparent;
+                    box-shadow: -5px 5px 0 0px $font-color-primary-themed;
+                    border-radius: 50%;
+                    margin: 0 $defaultSpacing-xs;
+                    transform: scaleX(-1) rotate(10deg) translate(30%,-20%);
+                }
+            }
+        }
+
+        @include breakpoint(tablet) {
+            .buttons-wrap {
+                display: block;
+                position: relative;
+                @include flexRowCentered();
+            }
+
+            .buttons-wrap-mobile {
+                display: none;
+            }
+
+            .toggle-theme-button {
+                div {
+                    transform: translate(20%, -20%);
+                }
+            }
+        }
+
+        
+        
+        .language-select {
+            border: none;
+            padding: $defaultSpacing-xs;
+            margin: $defaultSpacing-xs;
+            color: $secondary-bg;
+            background-color: transparent;
+            border: 1px solid $secondary-bg;
+        }
+
+        .join-us-button {
+            border: none;
+            padding: $defaultSpacing-xs / 1.1;
+            background-color: $bg-primary-themed;
+            color: $primary-bg;
+            font-size: $font-l;
+        }
+    }
+}
+
+.content-wrap {
+    flex-grow: 1;
+    background-color: $bg-primary-themed-reversed;
+
+    @include flexColumnCentered();
+
+    .card {
+        @include flexColumnCentered();
+        background-color: $secondary-bg;
+        color: $accent-bg;
+        width: 300px;
+        height: 300px;
+
+        .primary {
+            font-size: $font-xl;
+            color: $accent-bg;
+            @include fontPrimaryBold();
+        }
+
+        .secondary {
+            color: $accent-light-bg;
+        }
+    }
+}
+
+// Section
+
+// Footer
+.footer-wrap {
+    width: 100%;
+    background-color: $bg-primary-themed-reversed;
+    padding-top: $defaultSpacing-m;
+    color: $color-white;
+
+    @include breakpoint(mobile) {
+        .footer {
+            width: 100%;
+            .footer-section {
+                div {
+                    @include flexColumnCentered();
+                    li {
+                        list-style: none;
+                        padding-bottom: $defaultSpacing-xs/2;
+
+                        a {
+                            color: $secondary-bg;
+                            &:hover {
+                                cursor: pointer;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            hr {
+                color:  $secondary-bg;
+                margin: $defaultSpacing-m;
+            }
+
+            .footer-copyright {
+                color: $secondary-bg;
+                .social-links {
+                    i {
+                        font-size: $font-xxl;
+                        margin: $defaultSpacing-m;
+                        
+                        &:hover {
+                            cursor: pointer;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        .footer {
+            .footer-section {
+                div {
+                    width: 80%;
+                    margin: 0 auto;
+                    @include flexRowCentered();
+                    justify-content: space-around;
+
+                    li {
+                        padding: $defaultSpacing-xs;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(laptop) {
+        div {
+            width: 50%;
+            margin: 0 auto;
+            li {
+                padding: $defaultSpacing-xs;
+            }
+        }
+    }
+}

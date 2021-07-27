@@ -1,0 +1,42 @@
+// Dark Theme
+:root {
+    --color-page-background: #{$primary-bg};
+    --color-page-background-reversed: #{$color-white};
+    --color-text: #{$color-black};
+    --color-text-reverse: #{$color-white};
+    --color-border: #{$color-black};
+    --color-article-background: #{$color-white};
+    --color-article-shadow: #{$color-gray-dark};
+    --color-body-bg: #{$body-light};
+    --color-nav-bg: #{$nav-light};
+    --color-box-shadow: #{$box-shadow-light};
+    --color-primary: #{$color-red};
+    --color-primary-text: #{$color-white};
+  }
+  
+.dark {
+    --color-page-background: #{$color-white};
+    --color-page-background-reversed: #{$primary-bg};
+    --color-text: #{$color-white};
+    --color-text-reverse: #{$color-black};
+    --color-border: #{$color-white};
+    --color-article-background: #{$color-gray-light};
+    --color-article-shadow: #{$color-gray-light};
+    --color-body-bg: #{$body-dark};
+    --color-nav-bg: #{$nav-dark};
+    --color-box-shadow: #{$box-shadow-dark};
+    --color-primary: #{$body-dark};
+    --color-primary-text: #{$color-red};
+}
+
+// Themed Colors
+$bg-primary-themed: var(--color-page-background);
+$bg-primary-themed-reversed: var(--color-page-background-reversed);
+$font-color-primary-themed: var(--color-text);
+$font-color-primary-themed-reverse: var(--color-text-reverse);
+$body-bg-color-themed: var(--color-body-bg);
+$nav-bg-color-themed: var(--color-nav-bg);
+$box-shadow-themed: var(--color-box-shadow);
+$primary-bg-themed: var(--color-primary);
+$primary-text-color-themed: var(--color-primary-text);
+$border-color-themed: var(--color-article-shadow);

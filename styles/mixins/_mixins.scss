@@ -1,0 +1,57 @@
+// Responsive UI
+
+@mixin breakpoint($point) {
+    @if $point == mobile {
+        @media screen and (min-width: 320px) { @content; }
+    }
+    @if $point == tablet {
+        @media screen and (min-width: 720px) { @content; }
+    }
+    @if $point == tablet-large {
+        @media screen and (min-width: 1000px) { @content; }
+    }
+    @if $point == laptop {
+        @media screen and (min-width: 1366px) { @content; }
+    }
+    @if $point == desktop {
+        @media screen and (min-width: 1920px) { @content; }
+    }
+}
+
+@mixin flexRowCentered() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexRowReverse() {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@mixin flexColumnCentered() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin fontPrimary() {
+    font-family: $font-primary;
+}
+
+@mixin fontPrimaryBold() {
+    font-family: $font-primary;
+    font-weight: 800;
+}

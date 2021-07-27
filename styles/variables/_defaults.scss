@@ -1,0 +1,36 @@
+
+// Colors
+$primary-bg: #212121;
+$secondary-bg: hsl(0, 0%, 31%);
+$accent-bg: #2ec4b6;
+$accent-light-bg: #2ec4b6;
+$color-red: $primary-bg;
+$color-black: rgb(0,0,0);
+$color-white: rgb(255,255,255);
+$color-gray-light: rgba($color-white, .15);
+$color-gray-dark: rgba($color-black, .15);
+$color-gray: gray;
+$body-light: $color-gray-light;
+$body-dark:  #121212;
+$nav-dark:  #3c3c3c;
+$nav-light: lightgrey;
+$box-shadow-light: $color-white;
+$box-shadow-dark: $color-black;
+
+// Font Sizes
+$font-xs: 0.625em;
+$font-s: 0.8em;
+$font-l: 1.125em;
+$font-xl: 1.5em;
+$font-xxl: 2em;
+$lineHeight-m: 1.4em;
+
+// Font Style
+$font-primary: 'Spartan', sans-serif;
+
+
+// Spacings
+$defaultSpacing-xs: 0.5rem;
+$defaultSpacing-s: 0.8rem;
+$defaultSpacing-m: 1rem;
+$defaultSpacing-l:1.5rem;
