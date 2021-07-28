@@ -55,3 +55,106 @@
     font-family: $font-primary;
     font-weight: 800;
 }
+
+@mixin fadeIn($direction) {
+    @if $direction == simple {
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.75;;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+    @if $direction == top {
+        @keyframes fadeInTop {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, -10%, 0);
+            }
+            25% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    @if $direction == right {
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translate3d(10%, 0, 0);
+            }
+            25% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    @if $direction == bottom {
+        @keyframes fadeInBottom {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 10%, 0);
+            }
+            25% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    @if $direction == left {
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translate3d(-10%, 0, 0);
+            }
+            25% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.75;
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}
