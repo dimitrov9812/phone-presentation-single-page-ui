@@ -1,6 +1,12 @@
 @import './variables/defaults';
 @import './variables/themes';
 @import './mixins/mixins';
+@import './pages/specifications/specifications.scss';
+@import './pages/gallery/gallery.scss';
+@import './pages/about/about.scss';
+@import './pages/contacts/contacts.scss';
+@import './pages/order/order.scss';
+
 // Breakpoints -> mobile -> tablet -> laptop -> desktop
 
 body {
@@ -12,6 +18,7 @@ body {
     height: 100vh;
     background-color: $bg-primary-themed-reversed;
     color: $font-color-primary-themed;
+    position: relative;
 
     @include flexColumn();
 
@@ -40,8 +47,8 @@ body {
         border: 2px solid $accent-bg;
         padding: $defaultSpacing-m;
         padding-top: $defaultSpacing-xl/2.5;
-        background-color: transparent;
-        color: $font-color-primary-themed;
+        background-color: $order-now-button-color-themed;
+        color: $color-white;
         font-size: $font-l;
         border-radius: 50px;
     
@@ -59,17 +66,13 @@ body {
             background-color: $accent-bg;
             cursor: pointer;
         }
+
     }
 }
 
 * {
     transition: all .15s ease;
 }
-
-// Language specific styles
-    //li:lang(en) { color: red }
-    // li:lang(fr) { color: blue }
-    // li:lang(de) { color: yellow }
 
 a {
     text-decoration: none;
@@ -78,7 +81,17 @@ a {
     &:hover {
         color: $accent-bg;
     }
+    
 }
+
+.active-nav-link {
+    font-weight: bolder;
+}
+
+// Language specific styles
+    //li:lang(en) { color: red }
+    // li:lang(fr) { color: blue }
+    // li:lang(de) { color: yellow }
 
 .not-localized {
     display: none;
@@ -123,6 +136,7 @@ a {
 
         .ul-nav {
             flex: 1;
+
             @include flexRow();
 
             @include breakpoint(mobile) {
@@ -137,6 +151,7 @@ a {
             li {
                 padding: $defaultSpacing-m;
                 font-variant-caps: all-small-caps;
+                font-weight: normal;
 
                 @include breakpoint(mobile) {
                     font-size: $font-s * 1.1;
@@ -335,7 +350,7 @@ a {
         }
     }
 }
-
+  
 // Section
 
 // Footer

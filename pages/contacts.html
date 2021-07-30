@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="./assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap" rel="stylesheet"> 
+    <title>Titan</title>
+</head>
+
+<body>
+    <!-- Fontawesome icon test -->
+    <!-- <i class="fa fa-facebook-square"></i> -->
+    <div class="nav-wrap">
+        <div class="nav">
+            <div class="nav-logo">
+                <span class="logo">LOGO</span>
+                <div class="buttons-wrap-mobile">
+                    <select id="language"
+                            class="language-select"
+                            name="language"
+                            onchange="handleLanguageSelect()">
+                      <option value="en">en</option>
+                      <option value="ch">ch</option>
+                      <option value="es">es</option>
+                      <option value="ar">ar</option>
+                      <option value="de">de</option>
+                      <option value="ru">ru</option>
+                      <option value="fr">fr</option>
+                      <option value="ja">ja</option>
+                      <option value="ko">ko</option>
+                    </select>
+                    <div class="toggle-theme-button" onclick="changeTheme()">
+                        <div ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ul-nav">
+                <li lang="en"><a href="/">Home</a></li>
+                <li lang="en"><a href="./specifications.html">Specifications</a></li>
+                <li lang="en"><a href="./gallery.html">Gallery</a></li>
+                <li lang="en"><a href="./about.html">About</a></li>
+                <li lang="en"><a href="./contacts.html" class="active-nav-link">Contacts</a></li>
+                <li lang="en"><a href="./order.html">Order</a></li>
+                <li lang="ch"><a href="/">Home [ch]</a></li>
+                <li lang="ch"><a href="./specifications.html">Specifications [ch]</a></li>
+                <li lang="ch"><a href="./gallery.html">Gallery [ch]</a></li>
+                <li lang="ch"><a href="./about.html">About [ch]</a></li>
+                <li lang="ch"><a href="./contacts.html" class="active-nav-link">Contacts [ch]</a></li>
+                <li lang="ch"><a href="./order.html">Order [ch]</a></li>
+                <li lang="es"><a href="/">Home [es]</a></li>
+                <li lang="es"><a href="./specifications.html">Specifications [es]</a></li>
+                <li lang="es"><a href="./gallery.html">Gallery [es]</a></li>
+                <li lang="es"><a href="./about.html">About [es]</a></li>
+                <li lang="es"><a href="./pages/contacts.html">Contacts [es]</a></li>
+                <li lang="es"><a href="./pages/order.html">Order [es]</a></li>
+                <li lang="ar"><a href="/">Home [ar]</a></li>
+                <li lang="ar"><a href="./specifications.html">Specifications [ar]</a></li>
+                <li lang="ar"><a href="./gallery.html">Gallery [ar]</a></li>
+                <li lang="ar"><a href="./about.html">About [ar]</a></li>
+                <li lang="ar"><a href="./contacts.html" class="active-nav-link">Contacts [ar]</a></li>
+                <li lang="ar"><a href="./order.html">Order [ar]</a></li>
+                <li lang="de"><a href="/">Home [de]</a></li>
+                <li lang="de"><a href="./specifications.html">Specifications [de]</a></li>
+                <li lang="de"><a href="./gallery.html">Gallery [de]</a></li>
+                <li lang="de"><a href="./about.html">About [de]</a></li>
+                <li lang="de"><a href="./contacts.html" class="active-nav-link">Contacts [de]</a></li>
+                <li lang="de"><a href="./order.html">Order [de]</a></li>
+                <li lang="ru"><a href="/">Home [ru]</a></li>
+                <li lang="ru"><a href="./specifications.html">Specifications [ru]</a></li>
+                <li lang="ru"><a href="./gallery.html">Gallery [ru]</a></li>
+                <li lang="ru"><a href="./about.html">About [ru]</a></li>
+                <li lang="ru"><a href="./contacts.html" class="active-nav-link">Contacts [ru]</a></li>
+                <li lang="ru"><a href="./order.html">Order [ru]</a></li>
+                <li lang="fr"><a href="/">Home [fr]</a></li>
+                <li lang="fr"><a href="./specifications.html">Specifications [fr]</a></li>
+                <li lang="fr"><a href="./gallery.html">Gallery [fr]</a></li>
+                <li lang="fr"><a href="./about.html">About [fr]</a></li>
+                <li lang="fr"><a href="./contacts.html" class="active-nav-link">Contacts [fr]</a></li>
+                <li lang="fr"><a href="./order.html">Order [fr]</a></li>
+                <li lang="ja"><a href="/">Home [ja]</a></li>
+                <li lang="ja"><a href="./specifications.html">Specifications [ja]</a></li>
+                <li lang="ja"><a href="./gallery.html">Gallery [ja]</a></li>
+                <li lang="ja"><a href="./about.html">About [ja]</a></li>
+                <li lang="ja"><a href="./contacts.html">Contacts [ja]</a></li>
+                <li lang="ja"><a href="./order.html">Order [ja]</a></li>
+                <li lang="ko"><a href="/">Home [ko]</a></li>
+                <li lang="ko"><a href="./specifications.html">Specifications [ko]</a></li>
+                <li lang="ko"><a href="./gallery.html">Gallery [ko]</a></li>
+                <li lang="ko"><a href="./about.html">About [ko]</a></li>
+                <li lang="ko"><a href="./contacts.html" class="active-nav-link">Contacts [ko]</a></li>
+                <li lang="ko"><a href="./order.html">Order [ko]</a></li>
+            </div>
+            <div class="buttons-wrap">
+                <div class="toggle-theme-button" onclick="changeTheme()">
+                    <div ></div>
+                </div>
+                <select id="language"
+                        class="language-select language-select-desktop"
+                        name="language"
+                        onchange="handleLanguageSelectDesktop()">
+                  <option value="en">en</option>
+                  <option value="ch">ch</option>
+                  <option value="es">es</option>
+                  <option value="ar">ar</option>
+                  <option value="de">de</option>
+                  <option value="ru">ru</option>
+                  <option value="fr">fr</option>
+                  <option value="ja">ja</option>
+                  <option value="ko">ko</option>
+                </select> 
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="content-wrap">
+       contacts
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer-copyright">
+            <div class="copyright">Copyright © 1920 - 2021 Strawberry Phone</div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

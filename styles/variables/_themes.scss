@@ -12,6 +12,7 @@
     --color-box-shadow: #{$box-shadow-light};
     --color-primary: #{$color-red};
     --color-primary-text: #{$color-white};
+    --color-order-now-button: #{$accent-bg};
   }
   
 .dark {
@@ -27,6 +28,7 @@
     --color-box-shadow: #{$box-shadow-dark};
     --color-primary: #{$body-dark};
     --color-primary-text: #{$color-red};
+    --color-order-now-button: #{$color-transparent};
 }
 
 // Themed Colors
@@ -40,3 +42,4 @@ $box-shadow-themed: var(--color-box-shadow);
 $primary-bg-themed: var(--color-primary);
 $primary-text-color-themed: var(--color-primary-text);
 $border-color-themed: var(--color-article-shadow);
+$order-now-button-color-themed: var(--color-order-now-button);

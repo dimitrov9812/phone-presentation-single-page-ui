@@ -21,7 +21,7 @@ let languageSelectorDesktop = document.querySelector('.language-select-desktop')
 
 getGlobalLanguage();
 getGlobalTheme();
-initMap();
+// initMap();
 
 function getGlobalLanguage() {
     let language = window.localStorage.getItem('language');
