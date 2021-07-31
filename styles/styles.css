@@ -416,12 +416,21 @@ a:hover {
 }
 
 .content-wrap .illustration {
-  background-color: blue;
-  padding: 1rem;
-  margin: 1rem;
   position: relative;
+}
+
+.content-wrap .illustration .phone-image-container {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.content-wrap .illustration .phone-image-container .image {
+  width: 330px;
+  height: 600px;
   -webkit-animation: fadeInTop 1.5s ease-in both;
           animation: fadeInTop 1.5s ease-in both;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @-webkit-keyframes fadeInTop {
@@ -468,19 +477,103 @@ a:hover {
   }
 }
 
-.content-wrap .decoration {
+.content-wrap .illustration .shadow {
+  position: absolute;
+  bottom: -100px;
+  right: -10px;
+  width: 250px;
+  height: 15px;
+  background: #BDBF9E;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #000000), to(transparent));
+  background: linear-gradient(to right, transparent 0%, #000000 50%, transparent 100%);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  border-radius: 100%;
+  margin-top: 6rem;
+  -webkit-animation: fadeInBottom 1.5s ease-in;
+          animation: fadeInBottom 1.5s ease-in;
+  -webkit-animation: animateWidth 1.5s ease-in-out;
+          animation: animateWidth 1.5s ease-in-out;
+}
+
+@-webkit-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes animateWidth {
+  0% {
+    width: 350px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+
+@keyframes animateWidth {
+  0% {
+    width: 350px;
+  }
+  100% {
+    width: 250px;
+  }
+}
+
+.content-wrap .illustration .decoration {
   position: absolute;
   z-index: -100;
-  background-color: red;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   top: 0;
   left: -50px;
+  background: #2ec4b6;
+  background: radial-gradient(ellipse at center, transparent 0%, #2ec4b6 0%, transparent 100%);
   -webkit-animation: fadeInLeft 1.5s ease-in both;
           animation: fadeInLeft 1.5s ease-in both;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -527,16 +620,17 @@ a:hover {
   }
 }
 
-.content-wrap .decoration-second {
-  background: radial-gradient(green, red, rgba(0, 0, 255, 0.638));
-  -webkit-filter: blur();
-          filter: blur();
-  top: 150px;
-  left: 200px;
+.content-wrap .illustration .decoration-first {
+  top: -100px;
+  left: 150px;
   -webkit-animation: fadeInRight 1.5s ease-in both;
           animation: fadeInRight 1.5s ease-in both;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+  background: #2ec4b6;
+  background: radial-gradient(ellipse at center, transparent 0%, #2ec4b6 0%, #21212136 70%);
+  animation-delay: 0.5s;
+  animation: fadeInRight 1.5s ease-in both;
 }
 
 @-webkit-keyframes fadeInRight {
@@ -583,14 +677,15 @@ a:hover {
   }
 }
 
-.content-wrap .decoration-third {
-  background-color: green;
-  top: 300px;
-  left: -50px;
-  -webkit-animation: fadeInLeft 1.5s ease-in both;
-          animation: fadeInLeft 1.5s ease-in both;
+.content-wrap .illustration .decoration-second {
+  top: 350px;
+  left: -180px;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+  background: #2ec4b6;
+  background: radial-gradient(ellipse at center, transparent 0%, #2ec4b6 0%, #21212136 70%);
+  -webkit-animation: fadeInLeft 2s ease-in both;
+          animation: fadeInLeft 2s ease-in both;
 }
 
 @keyframes fadeInLeft {
