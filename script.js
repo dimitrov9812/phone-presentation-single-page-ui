@@ -21,7 +21,7 @@ let languageSelectorDesktop = document.querySelector('.language-select-desktop')
 
 getGlobalLanguage();
 getGlobalTheme();
-// initMap();
+initMap();
 
 function getGlobalLanguage() {
     let language = window.localStorage.getItem('language');
@@ -98,7 +98,21 @@ function setLanguagePickerValue(language) {
 
 
 // Handle theme change =================================================================
-function changeTheme() {
+function changeTheme() {function initMap() {
+    if (google != undefined) {
+        let location = { lat: -34.397, lng: 150.644 };
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: location,
+            zoom: 8,
+        });
+    
+        marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+}
+
     document.body.classList.toggle('dark');
     if (theme == 'light') {
         theme = 'dark'

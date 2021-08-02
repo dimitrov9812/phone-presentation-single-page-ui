@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=about.css.map */
+.about-content-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: red;
+}
+/*# sourceMappingURL=about.css.map */

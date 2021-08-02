@@ -12,7 +12,10 @@
     --color-box-shadow: #{$box-shadow-light};
     --color-primary: #{$color-red};
     --color-primary-text: #{$color-white};
-    --color-order-now-button: #{$accent-bg};
+    --color-order-now-button: #{$accent-light-bg};
+    --color-accent-theme: #{$accent-bg};
+    --color-accent-theme-reversed: #{$accent-light-bg};
+    --color-black-switch: #{$color-light-black};
   }
   
 .dark {
@@ -29,6 +32,9 @@
     --color-primary: #{$body-dark};
     --color-primary-text: #{$color-red};
     --color-order-now-button: #{$color-transparent};
+    --color-accent-theme: #{$accent-light-bg};
+    --color-accent-theme-reversed: #{$accent-bg};
+    --color-black-switch: #{$color-black};
 }
 
 // Themed Colors
@@ -43,3 +49,6 @@ $primary-bg-themed: var(--color-primary);
 $primary-text-color-themed: var(--color-primary-text);
 $border-color-themed: var(--color-article-shadow);
 $order-now-button-color-themed: var(--color-order-now-button);
+$accent-color-themed: var(--color-accent-theme);
+$accent-color-themed-reversed: var(--color-accent-theme-reversed);
+$black-to-light-black: var(--color-black-switch);

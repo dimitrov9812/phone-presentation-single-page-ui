@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap" rel="stylesheet">
     <title>Titan</title>
 </head>
 
@@ -21,22 +21,19 @@
             <div class="nav-logo">
                 <span class="logo">LOGO</span>
                 <div class="buttons-wrap-mobile">
-                    <select id="language"
-                            class="language-select"
-                            name="language"
-                            onchange="handleLanguageSelect()">
-                      <option value="en">en</option>
-                      <option value="ch">ch</option>
-                      <option value="es">es</option>
-                      <option value="ar">ar</option>
-                      <option value="de">de</option>
-                      <option value="ru">ru</option>
-                      <option value="fr">fr</option>
-                      <option value="ja">ja</option>
-                      <option value="ko">ko</option>
+                    <select id="language" class="language-select" name="language" onchange="handleLanguageSelect()">
+                        <option value="en">en</option>
+                        <option value="ch">ch</option>
+                        <option value="es">es</option>
+                        <option value="ar">ar</option>
+                        <option value="de">de</option>
+                        <option value="ru">ru</option>
+                        <option value="fr">fr</option>
+                        <option value="ja">ja</option>
+                        <option value="ko">ko</option>
                     </select>
                     <div class="toggle-theme-button" onclick="changeTheme()">
-                        <div ></div>
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -98,30 +95,48 @@
             </div>
             <div class="buttons-wrap">
                 <div class="toggle-theme-button" onclick="changeTheme()">
-                    <div ></div>
+                    <div></div>
                 </div>
-                <select id="language"
-                        class="language-select language-select-desktop"
-                        name="language"
-                        onchange="handleLanguageSelectDesktop()">
-                  <option value="en">en</option>
-                  <option value="ch">ch</option>
-                  <option value="es">es</option>
-                  <option value="ar">ar</option>
-                  <option value="de">de</option>
-                  <option value="ru">ru</option>
-                  <option value="fr">fr</option>
-                  <option value="ja">ja</option>
-                  <option value="ko">ko</option>
-                </select> 
+                <select id="language" class="language-select language-select-desktop" name="language"
+                    onchange="handleLanguageSelectDesktop()">
+                    <option value="en">en</option>
+                    <option value="ch">ch</option>
+                    <option value="es">es</option>
+                    <option value="ar">ar</option>
+                    <option value="de">de</option>
+                    <option value="ru">ru</option>
+                    <option value="fr">fr</option>
+                    <option value="ja">ja</option>
+                    <option value="ko">ko</option>
+                </select>
             </div>
         </div>
     </div>
 
-   
 
-    <div class="content-wrap">
-       about
+
+    <div class="about-content-wrap">
+        <div class="left-side">
+            <span class="about-text" lang="en">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </span>
+        </div>
+        <div class="right-side">
+            <img src="../assets/images/businessman.jpg" />
+            <span class="image-title" lang="en">John Doe</span>
+            <span class="image-subtitle" lang="en">CEO</span>
+        </div>
     </div>
 
     <div class="footer-wrap">

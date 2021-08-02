@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="./assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQNhoXdtEIMvnpnDnLaZRBEaS5QNG8_-Q&callback=initMap&libraries=&v=weekly&channel=2"
+            async
+    ></script>
+
     <title>Titan</title>
 </head>
 
@@ -21,22 +25,19 @@
             <div class="nav-logo">
                 <span class="logo">LOGO</span>
                 <div class="buttons-wrap-mobile">
-                    <select id="language"
-                            class="language-select"
-                            name="language"
-                            onchange="handleLanguageSelect()">
-                      <option value="en">en</option>
-                      <option value="ch">ch</option>
-                      <option value="es">es</option>
-                      <option value="ar">ar</option>
-                      <option value="de">de</option>
-                      <option value="ru">ru</option>
-                      <option value="fr">fr</option>
-                      <option value="ja">ja</option>
-                      <option value="ko">ko</option>
+                    <select id="language" class="language-select" name="language" onchange="handleLanguageSelect()">
+                        <option value="en">en</option>
+                        <option value="ch">ch</option>
+                        <option value="es">es</option>
+                        <option value="ar">ar</option>
+                        <option value="de">de</option>
+                        <option value="ru">ru</option>
+                        <option value="fr">fr</option>
+                        <option value="ja">ja</option>
+                        <option value="ko">ko</option>
                     </select>
                     <div class="toggle-theme-button" onclick="changeTheme()">
-                        <div ></div>
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -98,30 +99,38 @@
             </div>
             <div class="buttons-wrap">
                 <div class="toggle-theme-button" onclick="changeTheme()">
-                    <div ></div>
+                    <div></div>
                 </div>
-                <select id="language"
-                        class="language-select language-select-desktop"
-                        name="language"
-                        onchange="handleLanguageSelectDesktop()">
-                  <option value="en">en</option>
-                  <option value="ch">ch</option>
-                  <option value="es">es</option>
-                  <option value="ar">ar</option>
-                  <option value="de">de</option>
-                  <option value="ru">ru</option>
-                  <option value="fr">fr</option>
-                  <option value="ja">ja</option>
-                  <option value="ko">ko</option>
-                </select> 
+                <select id="language" class="language-select language-select-desktop" name="language"
+                    onchange="handleLanguageSelectDesktop()">
+                    <option value="en">en</option>
+                    <option value="ch">ch</option>
+                    <option value="es">es</option>
+                    <option value="ar">ar</option>
+                    <option value="de">de</option>
+                    <option value="ru">ru</option>
+                    <option value="fr">fr</option>
+                    <option value="ja">ja</option>
+                    <option value="ko">ko</option>
+                </select>
             </div>
         </div>
     </div>
 
-   
 
-    <div class="content-wrap">
-       contacts
+
+    <div class="contacts-content-wrap">
+        <div class="map" id="map">
+
+        </div>
+
+        <div class="contacts-container">
+            <ul>
+                <li lang="en">New York, USA</li>
+                <li lang="en">+123456789</li>
+                <li lang="en">strawberryphone@gmail.com</li>
+            </ul>
+        </div>
     </div>
 
     <div class="footer-wrap">
@@ -131,6 +140,7 @@
     </div>
 
     <script src="../script.js"></script>
+    
 </body>
 
 </html>

@@ -18,6 +18,7 @@ body {
     height: 100vh;
     background-color: $bg-primary-themed-reversed;
     color: $font-color-primary-themed;
+    overflow-x: hidden;
     position: relative;
 
     @include flexColumn();
@@ -44,7 +45,7 @@ body {
     // }
 
     .button {
-        border: 2px solid $accent-bg;
+        border: 2px solid $accent-color-themed-reversed;
         padding: $defaultSpacing-m;
         padding-top: $defaultSpacing-xl/2.5;
         background-color: $order-now-button-color-themed;
@@ -268,7 +269,7 @@ a {
             }
     
             .secondary-title {
-                font-size: $font-xxl;
+                font-size: $font-xl;
             }
 
             .button-desktop {
@@ -289,83 +290,150 @@ a {
 
         .phone-image-container {
             transform: rotate(20deg);
+            padding: $defaultSpacing-xl;
+            padding-bottom: 0;
 
             .image {
-                width: 330px;
-                height: 600px; 
                 animation: fadeInTop 1.5s ease-in both;
                 transform: rotate(90deg);
     
                 @include fadeIn(top);
+
+                @include breakpoint(mobile) {
+                    width: 180px;
+                    height: 350px; 
+                }
+
+                @include breakpoint(tablet) {
+                    width: 220px;
+                    height: 420px; 
+                }
+
+                @include breakpoint(laptop) {
+                    width: 330px;
+                    height: 600px; 
+                }
             }
         }
 
         .shadow {
             position: absolute;
-            bottom: -100px;
-            right: -10px;
-            width: 250px;
             height: 15px;
             background: #BDBF9E;
-            background: -moz-linear-gradient(left, transparent 0%, #000000 50%, transparent 100%);
-            background: -webkit-linear-gradient(left, transparent 0%, #000000 50%, transparent 100%);
-            background: linear-gradient(to right, transparent 0%, #000000 50%, transparent 100%);
+            background: -moz-linear-gradient(left, transparent 0%, $black-to-light-black 50%, transparent 100%);
+            background: -webkit-linear-gradient(left, transparent 0%, $black-to-light-black 50%, transparent 100%);
+            background: linear-gradient(to right, transparent 0%, $black-to-light-black 50%, transparent 100%);
             filter: blur(5px);
             border-radius: 100%;
             margin-top: $defaultSpacing-xl*2;
             animation: fadeInBottom 1.5s ease-in;
-            animation: animateWidth 1.5s ease-in-out;
 
             @include fadeIn(bottom);
-            @include animateWidth(350px, 250px);
+            
+
+            @include breakpoint(mobile) {
+                width: 150px;
+                bottom: -50px;
+                right: 50px;
+                animation: animateWidth 1.5s ease-in-out;
+
+                @include animateWidth(250px, 150px);
+            }
+
+            @include breakpoint(tablet) {
+                width: 200px;
+                bottom: -50px;
+                animation: animateWidth 1.5s ease-in-out;
+
+                @include animateWidth(300px, 200px);
+            }
+
+            @include breakpoint(laptop) {
+                width: 250px;
+                bottom: -50px;
+                right: 50px;
+                animation: animateWidth 1.5s ease-in-out;
+
+                @include animateWidth(350px, 250px);
+            }
         }
         
         .decoration {
             position: absolute;
-            z-index: -100;
-            width: 350px;
-            height: 350px;
             border-radius: 50%;
+            overflow: hidden;
+            z-index: -100;
             top: 0;
             left: -50px;
-            background: $accent-light-bg;
-            background: -moz-radial-gradient(center, transparent 0%, $accent-light-bg 0%, transparent 100%);
-            background: -webkit-radial-gradient(center, transparent 0%, $accent-light-bg 0%, transparent 100%);
-            background: radial-gradient(ellipse at center, transparent 0%, $accent-light-bg 0%, transparent 100%);
+            background: $accent-color-themed;
+            background: -moz-radial-gradient(center, transparent 0%, $accent-color-themed 0%, transparent 80%);
+            background: -webkit-radial-gradient(center, transparent 0%, $accent-color-themed  0%, transparent 80%);
+            background: radial-gradient(ellipse at center, transparent 0%, $accent-color-themed 0%, transparent 80%);
             animation: fadeInLeft 1.5s ease-in both;
             animation-delay: 0.5s;
-            filter: blur(10px);
+            filter: blur(50px);
     
             @include fadeIn(left);
+
+            @include breakpoint(mobile) {
+                min-width: 200px;
+                min-height: 200px;
+            }
+
+            @include breakpoint(tablet) {
+                min-width: 250px;
+                min-height: 250px;
+            }
+
+            @include breakpoint(laptop) {
+                min-width: 350px;
+                min-height: 350px
+            }
         }
     
         .decoration-first {
-            top: -100px;
-            left: 150px;    
-            animation: fadeInRight 1.5s ease-in both;
-            animation-delay: 0.5s;
-            background: $accent-light-bg;
-            background: -moz-radial-gradient(center, transparent 0%, $accent-light-bg 0%, #21212136 70%);
-            background: -webkit-radial-gradient(center, transparent 0%, $accent-light-bg 0%, #21212136 70%);
-            background: radial-gradient(ellipse at center, transparent 0%, $accent-light-bg 0%, #21212136 70%);
             animation-delay: 0.5s;
             animation: fadeInRight 1.5s ease-in both;
+            overflow: hidden;
 
             @include fadeIn(right);
 
+            @include breakpoint(mobile) {
+                top: -10px;
+                left: 120px;
+            }
+
+            @include breakpoint(tablet) {
+                top: -20px;
+                left: 150px;   
+            }
+
+            @include breakpoint(laptop) {
+                top: -30px;
+                left: 200px;   
+            }
         }
     
         .decoration-second {
-            top: 350px;
-            left: -180px;
             animation-delay: 0.5s;
-            background: $accent-light-bg;
-            background: -moz-radial-gradient(center, transparent 0%, $accent-light-bg 0%, #21212136 70%);
-            background: -webkit-radial-gradient(center, transparent 0%, $accent-light-bg 0%, #21212136 70%);
-            background: radial-gradient(ellipse at center, transparent 0%, $accent-light-bg 0%, #21212136 70%);
-            animation: fadeInLeft 2s ease-in both;
+            animation: fadeInLeft 1.5s ease-in both;
 
             @include fadeIn(left);
+
+            @include breakpoint(mobile) {
+                top: 250px;
+                left: -80px;
+            }
+
+            @include breakpoint(tablet) {
+                top: 280px;
+                left: -120px;
+            }
+
+            @include breakpoint(laptop) {
+                top: 350px;
+                left: -180px;  
+            }
         }
     }
 
@@ -373,6 +441,7 @@ a {
         .button-mobile {
             display: block;
             margin-bottom: $defaultSpacing-xl;
+            margin-top: $defaultSpacing-xl*2;
             @include fadeIn(simple);
 
             animation: fadeIn 4s ease-in;
