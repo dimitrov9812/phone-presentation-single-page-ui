@@ -47,10 +47,11 @@
             font-size: $font-xl;
         }
 
-        ul {
+        div {
             border-left: 1px solid $font-color-primary-themed;
             li {
                 padding: $defaultSpacing-xs;
+                list-style: none;
             }
         }
     }

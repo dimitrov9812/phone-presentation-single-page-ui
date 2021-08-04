@@ -286,7 +286,6 @@ a {
     }
 
     .illustration {
-        position: relative;
 
         .phone-image-container {
             transform: rotate(20deg);
@@ -294,6 +293,7 @@ a {
             padding-bottom: 0;
 
             .image {
+                position: relative;
                 animation: fadeInTop 1.5s ease-in both;
                 transform: rotate(90deg);
     

@@ -1,0 +1,122 @@
+.specifications-content-wrap {
+    flex: 1;
+
+    @include breakpoint(tablet) {
+        @include flexRowCentered();
+        justify-content: space-around;
+    }
+
+    .illustration {
+        flex: 1;
+        margin: $defaultSpacing-m;
+        padding: $defaultSpacing-m;
+
+        @include flexColumnCentered();
+
+        @include breakpoint(mobile) {
+            align-items: center;
+        }
+
+        
+        @include breakpoint(tablet) {
+            align-items: flex-end;
+        }
+
+        img {
+            animation: fadeInTop 1.5s ease-in both;
+            transform: rotate(90deg);
+            
+            @include fadeIn(top);
+        
+            @include breakpoint(mobile) {
+                width: 180px;
+                height: 350px; 
+            }
+        
+            @include breakpoint(tablet) {
+                width: 220px;
+                height: 420px;
+                float: right;
+            }
+        
+            @include breakpoint(laptop) {
+                width: 330px;
+                height: 600px; 
+            }
+        }
+    }
+
+    .specifications-wrap {
+        flex: 1;
+        margin: $defaultSpacing-m;
+        padding: $defaultSpacing-m;
+        font-variant: small-caps;
+
+        @include breakpoint(mobile) {
+            @include flexColumnCentered();
+            align-items: center;
+        }
+
+        @include breakpoint(tablet) {
+            align-items: flex-start;
+        }
+
+        .specifications-title {
+            color: $accent-light-bg;
+            font-weight: bolder;
+            margin-bottom: $defaultSpacing-m;
+            font-variant-caps: small-caps;
+
+            @include breakpoint(mobile) {
+                font-size: $font-xl;
+            }
+
+            @include breakpoint(laptop) {
+                font-size: $font-xxl;
+            }
+        }
+
+        .specifications {
+            @include flexRowCentered();
+
+            @include breakpoint(mobile) {
+                margin-top: $defaultSpacing-l;
+            }
+            .specifications-keywords {
+                @include flexColumnCentered();
+                align-items: flex-start;
+
+                span {
+                    color: $accent-light-bg;
+                    font-size: $font-l;
+                    margin-right: $defaultSpacing-m;
+
+                    @include breakpoint(tablet) {
+                        font-size: $font-s*1.2;
+                    }
+
+                    @include breakpoint(laptop) {
+                        font-size: $font-xl;
+                    }
+                }
+            }
+
+            .specifications-values {
+                @include flexColumnCentered();
+                align-items: flex-start;
+
+                span {
+                    font-size: $font-l;
+
+                    @include breakpoint(tablet) {
+                        font-size: $font-s*1.2;
+                    }
+
+                    @include breakpoint(laptop) {
+                        font-size: $font-xl;
+                    }
+                }
+            }
+        }
+    }
+}
