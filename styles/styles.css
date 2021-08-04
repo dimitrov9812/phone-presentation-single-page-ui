@@ -68,7 +68,6 @@
           flex: 1;
   margin: 1rem;
   padding: 1rem;
-  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,10 +176,55 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  width: 40%;
   margin: 1rem;
   padding: 1rem;
   font-variant: small-caps;
+  -webkit-animation: fadeInRight 1.5s  ease-in-out;
+          animation: fadeInRight 1.5s  ease-in-out;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(10%, 0, 0);
+            transform: translate3d(10%, 0, 0);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(10%, 0, 0);
+            transform: translate3d(10%, 0, 0);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 
 @media screen and (min-width: 320px) {
@@ -922,6 +966,10 @@ a:hover {
   }
 }
 
+.content-wrap .illustration {
+  position: relative;
+}
+
 .content-wrap .illustration .phone-image-container {
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
@@ -1203,28 +1251,6 @@ a:hover {
   -webkit-animation: fadeInRight 1.5s ease-in both;
           animation: fadeInRight 1.5s ease-in both;
   overflow: hidden;
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(10%, 0, 0);
-            transform: translate3d(10%, 0, 0);
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
 }
 
 @keyframes fadeInRight {

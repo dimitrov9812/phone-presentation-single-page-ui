@@ -51,6 +51,9 @@
         margin: $defaultSpacing-m;
         padding: $defaultSpacing-m;
         font-variant: small-caps;
+        animation: fadeInRight 1.5s  ease-in-out;
+
+        @include fadeIn(right);
 
         @include breakpoint(mobile) {
             @include flexColumnCentered();
