@@ -1,0 +1,82 @@
+.specifications-content-wrap {
+    .specifications-wrap {
+        .specifications-title {
+            @include breakpoint(laptop) {
+                font-size: $font-xxl*1.5;
+            }
+        }
+        
+        .specifications-order {
+            width: 400px;
+            
+            @include breakpoint(mobile) {
+                @include flexColumnCentered();
+            }
+
+            .specification {
+                width: 100px;
+                height: 20px;
+                padding: $defaultSpacing-xs;
+                margin: $defaultSpacing-xs;
+                border: 1px solid $accent-color-themed-reversed;
+                border-radius: 40px;
+
+                @include flexRowCentered();
+
+                &:hover {
+                    background-color: red;
+                    background-color: $accent-color-themed-reversed;
+                }
+            }
+
+            .specification-color {
+                width: 100%;
+
+                @include breakpoint(mobile) {
+                    @include flexRowCentered();
+                    justify-content: space-around;
+                }
+            }
+
+            .specification-size {
+                width: 100%;
+
+                @include breakpoint(mobile) {
+                    @include flexRowCentered();
+                    justify-content: space-around;
+                }
+            }
+
+            .specification-footer {
+                width: 95%;
+                margin: $defaultSpacing-m;
+                padding: $defaultSpacing-m;
+                font-variant-caps: all-petite-caps;
+
+                @include breakpoint(mobile) {
+                    @include flexRowCentered();
+                    justify-content: space-between;
+                }
+                
+                .price {
+                    color: $accent-color-themed;
+                    font-size: $font-xl;
+                }
+
+                .buy-button {
+                    width: 80px;
+                    height: 10px;
+                    padding: $defaultSpacing-m;
+                    border: 1px solid $accent-color-themed-reversed;
+                    border-radius: 40px;
+
+                    @include flexRowCentered();
+                    
+                    &:hover {
+                        background-color:$accent-color-themed-reversed;
+                    }
+                }
+            }
+        }
+    }
+}

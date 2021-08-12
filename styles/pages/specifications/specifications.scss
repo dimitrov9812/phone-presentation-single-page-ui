@@ -47,7 +47,7 @@
     }
 
     .specifications-wrap {
-        flex: 1;
+        flex: 1.5;
         margin: $defaultSpacing-m;
         padding: $defaultSpacing-m;
         font-variant: small-caps;
@@ -62,10 +62,16 @@
 
         @include breakpoint(tablet) {
             align-items: flex-start;
+            margin-left: $defaultSpacing-xl*2;
+        }
+
+        @include breakpoint(laptop) {
+            align-items: flex-start;
+            margin-left: $defaultSpacing-xl*4;
         }
 
         .specifications-title {
-            color: $accent-light-bg;
+            color: $accent-color-themed;
             font-weight: bolder;
             margin-bottom: $defaultSpacing-m;
             font-variant-caps: small-caps;
@@ -75,7 +81,7 @@
             }
 
             @include breakpoint(laptop) {
-                font-size: $font-xxl;
+                font-size: $font-xxl*2;
             }
         }
 
@@ -90,7 +96,7 @@
                 align-items: flex-start;
 
                 span {
-                    color: $accent-light-bg;
+                    color: $accent-color-themed;
                     font-size: $font-l;
                     margin-right: $defaultSpacing-m;
 
