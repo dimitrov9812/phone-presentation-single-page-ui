@@ -17,10 +17,13 @@ let marker;
 let languageSelector = document.querySelector('.language-select');
 let languageSelectorDesktop = document.querySelector('.language-select-desktop');
 
+let slideIndex = 1;
+
 // Get the selected language from localstorage
 
 getGlobalLanguage();
 getGlobalTheme();
+showSlides(slideIndex);
 initMap();
 
 function getGlobalLanguage() {
@@ -78,9 +81,9 @@ function localizePage() {
                     const attribute = element.attributes.getNamedItem('lang');
 
                     if (attribute.value != selectedLanguage) {
-                        element.setAttribute('style','display: none');
+                        element.setAttribute('style', 'display: none');
                     } else {
-                        element.setAttribute('style','display: block');
+                        element.setAttribute('style', 'display: block');
                     }
                 }
             }
@@ -98,20 +101,21 @@ function setLanguagePickerValue(language) {
 
 
 // Handle theme change =================================================================
-function changeTheme() {function initMap() {
-    if (google != undefined) {
-        let location = { lat: -34.397, lng: 150.644 };
-        map = new google.maps.Map(document.getElementById("map"), {
-            center: location,
-            zoom: 8,
-        });
-    
-        marker = new google.maps.Marker({
-            position: location,
-            map: map
-        });
+function changeTheme() {
+    function initMap() {
+        if (google != undefined) {
+            let location = { lat: -34.397, lng: 150.644 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: location,
+                zoom: 8,
+            });
+
+            marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
     }
-}
 
     document.body.classList.toggle('dark');
     if (theme == 'light') {
@@ -131,7 +135,7 @@ function initMap() {
             center: location,
             zoom: 8,
         });
-    
+
         marker = new google.maps.Marker({
             position: location,
             map: map
@@ -141,4 +145,28 @@ function initMap() {
 
 // Handle Find a Mentor Card flip
 function handleCardFlip() {
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }

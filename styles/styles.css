@@ -377,6 +377,217 @@
   }
 }
 
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* The dots/bullets/indicators */
+}
+
+@media screen and (min-width: 720px) {
+  .slideshow-container {
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 60px;
+  }
+}
+
+.slideshow-container .prev, .slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 1rem;
+  color: var(--color-accent-theme);
+  font-weight: bold;
+  font-size: 1.125em;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 100%;
+  background-color: var(--color-page-background);
+  padding-left: 15px;
+  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  .slideshow-container .prev, .slideshow-container .next {
+    font-size: 2em;
+    width: 55px;
+    height: 50px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+.slideshow-container .next {
+  right: 0;
+  margin-right: 1rem;
+}
+
+.slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 720px) {
+  .slideshow-container .next {
+    right: -100px;
+  }
+}
+
+.slideshow-container .prev {
+  left: 0;
+  margin-left: 1rem;
+}
+
+.slideshow-container .prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 720px) {
+  .slideshow-container .prev {
+    left: -100px;
+  }
+}
+
+.slideshow-container .mySlides {
+  display: none;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slideshow-container .mySlides img {
+  max-width: 100%;
+  max-height: 60vh;
+  min-height: 60vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (min-width: 720px) {
+  .slideshow-container .mySlides img {
+    max-height: 100%;
+  }
+}
+
+.slideshow-container .dot-container {
+  position: absolute;
+  top: 85%;
+}
+
+.slideshow-container .dot-container .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+  border: 1px solid var(--color-accent-theme);
+}
+
+.slideshow-container .dot-container .active, .slideshow-container .dot-container .dot:hover {
+  background-color: var(--color-accent-theme);
+}
+
+@media screen and (min-width: 720px) {
+  .slideshow-container .dot-container {
+    top: 90%;
+  }
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+}
+
 .about-content-wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -753,6 +964,9 @@
 
 body {
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
   border: 0;
